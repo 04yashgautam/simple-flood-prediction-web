@@ -7,19 +7,16 @@ This repository contains a deep‑learning based flood prediction system develop
 ## 📋 Table of Contents
 
 1. [Overview](#overview)  
-2. [Project Structure](#project-structure)  
-3. [Features](#features)  
-4. [Prerequisites](#prerequisites)  
-5. [Installation & Setup](#installation--setup)  
-6. [Usage](#usage)  
-7. [Datasets & Preprocessing](#datasets--preprocessing)  
-8. [Model Architecture](#model-architecture)  
-9. [Training & Evaluation](#training--evaluation)  
-10. [Results](#results)  
-11. [Customization & Extensions](#customization--extensions)  
-12. [Troubleshooting](#troubleshooting)  
-13. [Contributing](#contributing)  
-14. [License](#license)
+2. [Features](#features)  
+3. [Prerequisites](#prerequisites)  
+4. [Installation & Setup](#installation--setup)  
+5. [Usage](#usage)  
+6. [Datasets & Preprocessing](#datasets--preprocessing)  
+7. [Model Architecture](#model-architecture)  
+8. [Training & Evaluation](#training--evaluation)  
+9. [Results](#results)  
+10. [Customization & Extensions](#customization--extensions)  
+11. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -45,14 +42,6 @@ A time‑series forecasting tool using LSTM‑based RNN models to predict river 
 - NumPy, Pandas, scikit-learn, matplotlib  
 - Jupyter Notebook / JupyterLab  
 
-Install with:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
 ## Installation & Setup
 
 1. Clone the repository:
@@ -64,7 +53,6 @@ pip install -r requirements.txt
    ```bash
    python -m venv venv
    source venv/bin/activate  # on Windows: venv\Scripts\activate
-   pip install -r requirements.txt
    ```
 3. Place your dataset files inside `data/`. Supported formats: CSV, Feather, or NumPy arrays.
 
