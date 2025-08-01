@@ -1,122 +1,122 @@
-# Flood Prediction Using Deep Learning
+# 🌊 Simple Flood Prediction Web
 
-This repository contains a deep‑learning based flood prediction system developed in Python using Keras / TensorFlow. The model forecasts future flood/discharge levels using historical hydrological and meteorological time-series data.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+
+A deep learning–based time-series prediction system to forecast flood or discharge levels using historical hydrological and meteorological data. Built with **Keras / TensorFlow**, featuring **SimpleRNN**.
 
 ---
 
 ## 📋 Table of Contents
 
-1. [Overview](#overview)  
-2. [Features](#features)  
-3. [Prerequisites](#prerequisites)  
-4. [Installation & Setup](#installation--setup)  
-5. [Usage](#usage)  
-6. [Datasets & Preprocessing](#datasets--preprocessing)  
-7. [Model Architecture](#model-architecture)  
-8. [Training & Evaluation](#training--evaluation)  
-9. [Results](#results)  
-10. [Customization & Extensions](#customization--extensions)  
-11. [Troubleshooting](#troubleshooting)
+1. [📌 Overview](#overview)
+2. [✨ Features](#features)
+3. [🛠️ Prerequisites](#prerequisites)
+4. [⚙️ Installation & Setup](#installation--setup)
+5. [🧪 Training & Evaluation](#training--evaluation)
+6. [📈 Results](#results)
+7. [🔧 Customization & Extensions](#customization--extensions)
+8. [🐛 Troubleshooting](#troubleshooting)
 
 ---
 
-## Overview
+## 📌 Overview
 
-A time‑series forecasting tool using LSTM‑based RNN models to predict river discharge or flood indicators – suitable for short‑term forecasting. Models explored include stacked LSTM, Bi‑LSTM, variants with layer normalization and Leaky ReLU, with hyperparameter tuning via Bayesian optimization.
+A time‑series forecasting tool using **RNN model** to predict river discharge or flood indicators for short-term forecasting. 
+---
+
+## ✨ Features
+
+✅ **Multi‑Step Prediction**
+✅ **Metrics**: RMSE, MAE, NSE (Nash–Sutcliffe Efficiency)
+✅ **End-to-End Workflow**: From preprocessing to evaluation and visualization
 
 ---
 
-## Features
+## 🛠️ Prerequisites
 
-- Multi‑step flood/discharge prediction from meteorological and hydrological time-series data.  
-- Explorations of model variants: stacked LSTM, Bi‑LSTM, DRNN with layer normalization & Leaky ReLU activation.  
-- Optional Bayesian or grid-based hyperparameter search.  
-- Evaluation metrics include RMSE, MAE, Nash–Sutcliffe Efficiency (NSE).
-
----
-
-## Prerequisites
-
-- Python 3.8 or newer  
-- TensorFlow & Keras  
-- NumPy, Pandas, scikit-learn, matplotlib  
-- Jupyter Notebook / JupyterLab  
-
-## Installation & Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/04yashgautam/Flood-Prediction-using-Deep-Learning.git
-   cd Flood-Prediction-using-Deep-Learning
-   ```
-2. Set up a virtual environment and install dependencies:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # on Windows: venv\Scripts\activate
-   ```
-3. Place your dataset files inside `data/`. Supported formats: CSV, Feather, or NumPy arrays.
+* Python 3.8+
+* TensorFlow & Keras
+* NumPy, Pandas, scikit-learn, Matplotlib
+* Jupyter Notebook / JupyterLab
 
 ---
 
-## Usage
+## ⚙️ Installation & Setup
 
-### Exploratory Data Analysis
-Open `notebooks/eda.ipynb` and inspect trends and correlations in rainfall, discharge, and other variables.
-
-### Training the Model
 ```bash
-python src/train_model.py   --config configs/lstm_config.yaml   --output-dir models/lstm_experiment
-```
+# 1. Clone the repository
+git clone https://github.com/04yashgautam/simple-flood-prediction-web.git
+cd simple-flood-prediction-web
 
-### Evaluating Performance
-```bash
-python src/evaluate.py   --model-path models/lstm_experiment/checkpoint.h5   --test-data data/test_dataset.csv
+# 2. Create a virtual environment
+python -m venv venv
+
+# 3. Activate the environment
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 4. Place your dataset inside the 'data/' folder
 ```
 
 ---
 
-## Datasets & Preprocessing
+## 🧪 Training & Evaluation
 
-- Dataset should include temporal features: rainfall, water level (discharge), flow rate, etc.  
-- Missing value handling, normalization (e.g., `StandardScaler`), and train/test splitting scripts are provided under `src/preprocessing.py`.
+* Monitor training via logs and loss/validation plots
+* Evaluation metrics include:
 
----
-
-## Model Architecture
-
-- **Stacked LSTM**: multi-layer LSTM network for sequence forecasting.  
-- **Bi-LSTM**: Bidirectional LSTM variant for capturing forward/backward temporal dependencies.  
-- Advanced variants include **layer normalization** and **Leaky ReLU** activations to stabilize and speed up learning.
+  * Root Mean Square Error (RMSE)
+  * Mean Absolute Error (MAE)
+  * Nash–Sutcliffe Efficiency (NSE)
+* Generates side-by-side actual vs. predicted plots
 
 ---
 
-## Training & Evaluation
+## 📈 Results
 
-- Training logs include loss curves, validation scores, and early stopping options.  
-- Evaluation script outputs performance metrics (RMSE, MAE, NSE).  
-- Visualizations (actual vs predicted) are generated automatically or via notebooks.
-
----
-
-## Results
-
-- Best-performing models typically achieve RMSE and high NSE values (> 0.9), indicating strong predictive power.  
-- Stacked LSTM or Bi-LSTM variants consistently outperform simpler baselines.
+* Achieves strong predictive accuracy with NSE > 0.9 in well-tuned configurations
+* Stacked/Bi-LSTM models outperform traditional single-layer approaches
 
 ---
 
-## Customization & Extensions
+## 🔧 Customization & Extensions
 
-- **Dataset Flexibility**: Adapt scripts to new data sources (rain gauge, satellite, DEM).  
-- **Model Extensions**: Try GRU, hybrid CNN‑RNN models, or attention mechanisms.  
-- **Hyperparameter Tuning**: Integrate Bayesian optimization or grid search (e.g., Optuna).  
-- **Uncertainty Estimation**: Use Bayesian neural networks or dropout for prediction intervals.
+🛠️ Customize and scale your experiments:
+
+* **Dataset**: Integrate rainfall station, satellite, or elevation data
+* **Models**: Try GRU, hybrid CNN-RNN, or attention-based models
+* **Search**: Leverage `Optuna` or `Ray Tune` for hyperparameter optimization
+* **Uncertainty**: Apply dropout or Bayesian RNN for confidence intervals
 
 ---
 
-## Troubleshooting
+## 🐛 Troubleshooting
 
-- **Data Format Issues**: Double-check headers, missing columns, and date parsing.  
-- **Model Divergence**: Adjust learning rate, batch size, or try normalization layers.
+* **Incorrect CSV Format** → Ensure date formats, headers, and required columns exist
+* **Model Instability** → Tweak batch size, learning rate, and try layer normalization
+
+---
+
+## 📦 requirements.txt
+
+```txt
+tensorflow>=2.5.0
+keras>=2.4.0
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+matplotlib>=3.4.0
+jupyterlab>=3.0.0
+yaml>=5.4.0
+optuna>=2.10.0  # optional, for Bayesian tuning
+seaborn>=0.11.0
+```
+
+---
+
+## 📫 Contact
+
+For questions or suggestions, feel free to connect via [GitHub](https://github.com/04yashgautam)!
 
 ---
