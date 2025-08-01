@@ -10,14 +10,14 @@ A deep learning–based time-series prediction system to forecast flood or disch
 
 ## 📋 Table of Contents
 
-1. [📌 Overview](#overview)
-2. [✨ Features](#features)
-3. [🛠️ Prerequisites](#prerequisites)
-4. [⚙️ Installation & Setup](#installation--setup)
-5. [🧪 Training & Evaluation](#training--evaluation)
-6. [📈 Results](#results)
-7. [🔧 Customization & Extensions](#customization--extensions)
-8. [🐛 Troubleshooting](#troubleshooting)
+1. 📌[Overview](#overview)
+2. ✨[Features](#features)
+3. 🛠️[Prerequisites](#prerequisites)
+4. ⚙️[Installation & Setup](#installation--setup)
+5. 🧪[Training & Evaluation](#training--evaluation)
+6. 📈[Results](#results)
+7. 🔧[Customization & Extensions](#customization--extensions)
+8. 🐛[Troubleshooting](#troubleshooting)
 
 ---
 
